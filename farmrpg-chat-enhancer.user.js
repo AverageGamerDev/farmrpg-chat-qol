@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         FarmRPG Chat Enhancer v1.5.0
 // @namespace    http://tampermonkey.net/
-// @version      1.5.0
+// @version      2.0.0
 // @description  Smart chat enhancements: mention notifications, message highlighting, session separator, attention pins, and keyword alerts for FarmRPG chat. Designed to improve chat experience with customizable features and persistent settings.
 // @author       Cadis Etrama Di Raizel
 // @match        https://farmrpg.com/
@@ -581,7 +581,10 @@ function checkForKeywords(messages) {
 
     // Check if already notified
     const fingerprint = getMessageFingerprint(msg);
-    if (state.keywordMatches.has(fingerprint)) continue;
+    if (state.keywordMatches.has(fingerprint)) {
+      applyKeywordHighlight(msg, matchedKeyword);
+      continue;
+    }
 
     // Record match
     state.keywordMatches.add(fingerprint);
