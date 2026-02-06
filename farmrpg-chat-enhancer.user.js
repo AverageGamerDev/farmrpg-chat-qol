@@ -1,5 +1,5 @@
 // ==UserScript==
-// @name         FarmRPG Chat Enhancer v1.5.0
+// @name         FarmRPG Chat Enhancer
 // @namespace    http://tampermonkey.net/
 // @version      2.0.0
 // @description  Smart chat enhancements: mention notifications, message highlighting, session separator, attention pins, and keyword alerts for FarmRPG chat. Designed to improve chat experience with customizable features and persistent settings.
